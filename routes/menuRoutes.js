@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+  
 const { menuPost, menuPostPatch, menuPostDelete, getMenuItems } = require('../controllers/menuControllers');
 const { customerPost, tablePatch, getCustomerDetails } = require('../controllers/customerControllers');
 
@@ -19,4 +19,4 @@ router.use('/cart',require("../controllers/cartControllers"));
 router.get('/getMenuItems',getMenuItems);
 router.get('/getCustomerDetails',getCustomerDetails);
 
-module.exports = router;
+module.exports = router;   

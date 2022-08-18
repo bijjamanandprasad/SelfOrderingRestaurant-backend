@@ -10,7 +10,9 @@ app.use(express.json());
 const menuRoutes = require('./routes/menuRoutes');
 app.use('/', menuRoutes);
 
-const CONNECTION_URL = "mongodb://localhost:27017/Restaurant";
+// const CONNECTION_URL = "mongodb://localhost:27017/Restaurant";
+const CONNECTION_URL = "mongodb+srv://lenin:lenin@restaurant.k2z5wws.mongodb.net/test";
+
 const PORT = 5000;
 
 mongoose.connect(CONNECTION_URL,{useUnifiedTopology:true},{useNewUrlParser:true},{useFindAndModify:true})
