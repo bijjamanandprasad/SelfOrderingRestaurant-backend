@@ -3,7 +3,14 @@ const mongoose = require("mongoose");
 
 const getCustomerDetails = async (req, res, next) => {
     try{
-        TableModel.find()
+        TableModel.find().populate({
+            path:"cart",
+            select:{count:1},
+            populate: [{
+                path:"item",
+                select:{title:1,price:1},
+            }]
+        })
         .then(user => {
             res.json(user);
         })

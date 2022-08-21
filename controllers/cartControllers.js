@@ -40,6 +40,7 @@ router.post('/setbill',(req,res,next) => {
         res.json({error_msg:"Failed to get customer data",error})
     }
 });
+
 router.post('/submitBill',(req,res,next) => {
     try{
         customer_id = req.body.customer_id || "";
